@@ -195,6 +195,7 @@ var _ = Describe("ResourceScanner", func() {
 					ResourceType:  "git",
 					Tags:          atc.Tags{"some-tag"},
 					ResourceTypes: creds.NewVersionedResourceTypes(variables, atc.VersionedResourceTypes{versionedResourceType}),
+					TeamID:        123,
 				}))
 				Expect(resourceTypes).To(Equal(creds.NewVersionedResourceTypes(variables, atc.VersionedResourceTypes{
 					versionedResourceType,
@@ -542,6 +543,7 @@ var _ = Describe("ResourceScanner", func() {
 					ResourceType:  "git",
 					Tags:          atc.Tags{"some-tag"},
 					ResourceTypes: creds.NewVersionedResourceTypes(variables, atc.VersionedResourceTypes{versionedResourceType}),
+					TeamID:        123,
 				}))
 				Expect(resourceTypes).To(Equal(creds.NewVersionedResourceTypes(variables, atc.VersionedResourceTypes{
 					versionedResourceType,
